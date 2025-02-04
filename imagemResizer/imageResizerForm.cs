@@ -22,6 +22,7 @@ namespace imagemResizer
             {
                 imagePath = openFile.FileName;
                 selectedImage.Image = Image.FromFile(imagePath);
+                selectedImage.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
 

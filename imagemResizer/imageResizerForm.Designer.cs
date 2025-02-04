@@ -129,6 +129,7 @@
             // 
             // selectedImage
             // 
+            selectedImage.Enabled = false;
             selectedImage.Location = new Point(293, 61);
             selectedImage.Name = "selectedImage";
             selectedImage.Size = new Size(190, 190);
