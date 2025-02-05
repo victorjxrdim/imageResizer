@@ -152,8 +152,9 @@
             // fileLabel
             // 
             fileLabel.AutoSize = true;
+            fileLabel.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             fileLabel.ForeColor = SystemColors.ActiveCaptionText;
-            fileLabel.Location = new Point(309, 271);
+            fileLabel.Location = new Point(22, 307);
             fileLabel.Name = "fileLabel";
             fileLabel.Size = new Size(0, 15);
             fileLabel.TabIndex = 10;
@@ -162,7 +163,7 @@
             // 
             label6.AutoSize = true;
             label6.ForeColor = SystemColors.ActiveCaptionText;
-            label6.Location = new Point(321, 254);
+            label6.Location = new Point(32, 287);
             label6.Name = "label6";
             label6.Size = new Size(131, 15);
             label6.TabIndex = 11;
