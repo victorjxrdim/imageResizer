@@ -2,16 +2,12 @@
 {
     public class Resizer
     {
-        public static void ImageResizer(Image image, int newHeight, string fileDestinyPath)
+        public static void ImageResizer(Image image, int newWidth, int newHeight, string fileDestinyPath)
         {
-            double ratio = (double)newHeight / image.Height;
-            int novaLargura = (int)(image.Width * ratio);
-            int novaAltura = newHeight;
-
-            Bitmap novaImagem = new Bitmap(novaLargura, novaAltura);
+            Bitmap novaImagem = new Bitmap(newWidth, newHeight);
             using (Graphics g = Graphics.FromImage(novaImagem))
             {
-                g.DrawImage(image, 0, 0, novaLargura, novaAltura);
+                g.DrawImage(image, 0, 0, newWidth, newHeight);
             }
 
             novaImagem.Save(fileDestinyPath);

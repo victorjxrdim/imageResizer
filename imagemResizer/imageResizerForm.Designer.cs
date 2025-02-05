@@ -40,22 +40,25 @@
             label5 = new Label();
             fileLabel = new Label();
             label6 = new Label();
+            widthTextBox = new TextBox();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)selectedImage).BeginInit();
             SuspendLayout();
             // 
             // heightTextBox
             // 
-            heightTextBox.Location = new Point(22, 47);
+            heightTextBox.Location = new Point(18, 98);
             heightTextBox.Name = "heightTextBox";
-            heightTextBox.PlaceholderText = "Write in pixels, example: 100px";
+            heightTextBox.PlaceholderText = "Example: 1080";
             heightTextBox.Size = new Size(175, 23);
             heightTextBox.TabIndex = 0;
+            heightTextBox.TextAlign = HorizontalAlignment.Center;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(31, 19);
+            label1.Location = new Point(31, 80);
             label1.Name = "label1";
             label1.Size = new Size(147, 15);
             label1.TabIndex = 1;
@@ -65,7 +68,7 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(22, 88);
+            label2.Location = new Point(22, 134);
             label2.Name = "label2";
             label2.Size = new Size(156, 15);
             label2.TabIndex = 2;
@@ -75,7 +78,7 @@
             // 
             imageSelectButton.FlatStyle = FlatStyle.System;
             imageSelectButton.ForeColor = SystemColors.ActiveCaptionText;
-            imageSelectButton.Location = new Point(36, 115);
+            imageSelectButton.Location = new Point(32, 155);
             imageSelectButton.Name = "imageSelectButton";
             imageSelectButton.Size = new Size(133, 45);
             imageSelectButton.TabIndex = 3;
@@ -87,7 +90,7 @@
             // 
             label3.AutoSize = true;
             label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(13, 177);
+            label3.Location = new Point(12, 211);
             label3.Name = "label3";
             label3.Size = new Size(174, 15);
             label3.TabIndex = 4;
@@ -97,7 +100,7 @@
             // 
             filePathButton.FlatStyle = FlatStyle.System;
             filePathButton.ForeColor = SystemColors.ActiveCaptionText;
-            filePathButton.Location = new Point(36, 206);
+            filePathButton.Location = new Point(32, 239);
             filePathButton.Name = "filePathButton";
             filePathButton.Size = new Size(133, 45);
             filePathButton.TabIndex = 5;
@@ -165,12 +168,33 @@
             label6.TabIndex = 11;
             label6.Text = "The file will be saved in:";
             // 
+            // widthTextBox
+            // 
+            widthTextBox.Location = new Point(18, 44);
+            widthTextBox.Name = "widthTextBox";
+            widthTextBox.PlaceholderText = "Example: 1920";
+            widthTextBox.Size = new Size(175, 23);
+            widthTextBox.TabIndex = 12;
+            widthTextBox.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.ForeColor = SystemColors.ActiveCaptionText;
+            label7.Location = new Point(31, 26);
+            label7.Name = "label7";
+            label7.Size = new Size(143, 15);
+            label7.TabIndex = 13;
+            label7.Text = "Choose your image width";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(525, 450);
+            Controls.Add(label7);
+            Controls.Add(widthTextBox);
             Controls.Add(label6);
             Controls.Add(fileLabel);
             Controls.Add(label5);
@@ -206,5 +230,7 @@
         private Label label5;
         private Label fileLabel;
         private Label label6;
+        private TextBox widthTextBox;
+        private Label label7;
     }
 }

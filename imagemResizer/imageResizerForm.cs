@@ -45,6 +45,12 @@ namespace imagemResizer
                 return;
             }
 
+            if (!int.TryParse(widthTextBox.Text, out int newWidth) || newWidth <= 0)
+            {
+                MessageBox.Show("Insert a valid width.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (!int.TryParse(heightTextBox.Text, out int newHeight) || newHeight <= 0)
             {
                 MessageBox.Show("Insert a valid height.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -56,7 +62,7 @@ namespace imagemResizer
 
             try
             {
-                Resizer.ImageResizer(Image.FromFile(imagePath), newHeight, finalPathName);
+                Resizer.ImageResizer(Image.FromFile(imagePath), newWidth, newHeight, finalPathName);
                 MessageBox.Show("Your image has been resized", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
