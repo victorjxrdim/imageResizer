@@ -15,8 +15,8 @@ namespace imagemResizer
         {
             OpenFileDialog openFile = new OpenFileDialog();
 
-            openFile.Title = "Selecione a imagem que deseja para redimensionar";
-            openFile.Filter = "Arquivos de Imagem|*.jpg;*.png;*.bmp;*.jpeg";
+            openFile.Title = "Select the image that you want to resize";
+            openFile.Filter = "File Images|*.jpg;*.png;*.bmp;*.jpeg";
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {
@@ -41,13 +41,13 @@ namespace imagemResizer
         {
             if (string.IsNullOrEmpty(imagePath) || string.IsNullOrEmpty(imagePathDestiny))
             {
-                MessageBox.Show("Selecione a imagem, e um diretório antes de redimensionar por favor");
+                MessageBox.Show("Select an image, and a directory that you want to save, please.");
                 return;
             }
 
             if (!int.TryParse(heightTextBox.Text, out int newHeight) || newHeight <= 0)
             {
-                MessageBox.Show("Insira um valor válido para a altura.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Insert a valid height.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -57,11 +57,11 @@ namespace imagemResizer
             try
             {
                 Resizer.ImageResizer(Image.FromFile(imagePath), newHeight, finalPathName);
-                MessageBox.Show("Imagem redimensionada e salva com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Your image has been resized", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao processar a imagem: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error to process the image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
